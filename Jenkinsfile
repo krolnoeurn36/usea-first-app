@@ -7,11 +7,6 @@ pipeline {
                 checkout scm
             }
         }
-        stage('Checkout Code') {
-            steps {
-                checkout scm
-            }
-        }
         stage('Build') {
             steps {
                 sh 'echo "Building the project..."'

@@ -31,7 +31,7 @@ pipeline {
                 // ssh agent(['your-ssh-credentials-id']) {
                 //     sh 'ssh user@your-server "docker pull krolnoeurnrpisb/usea-app-html:1.0.${BUILD_NUMBER} && docker stop your-container-name || true && docker rm your-container-name || true && docker run -d --name your-container-name -p 80:80 krolnoeurnrpisb/usea-app-html:1.0.${BUILD_NUMBER}"'
                 // }
-                    ssh root@54.204.234.40 "docker pull krolnoeurnrpisb/usea-app-html:${BUILD_NUMBER} && docker stop usea-app-html || true && docker rm usea-app-html || true && docker run -d --name usea-app-html -p 9099:80 krolnoeurnrpisb/usea-app-html:${BUILD_NUMBER}"
+                    sh 'ssh root@54.204.234.40 "docker pull krolnoeurnrpisb/usea-app-html:${BUILD_NUMBER} && docker stop usea-app-html || true && docker rm usea-app-html || true && docker run -d --name usea-app-html -p 9099:80 krolnoeurnrpisb/usea-app-html:${BUILD_NUMBER}"'
                 // Add your deploy commands here
                 }
                 

@@ -33,9 +33,9 @@ pipeline {
                 // }
                     ssh '''
                         // remove container if it exists
-                        ssh root@54.204.234.40 docker stop usea-app-html || true
+                        ssh root@34.227.61.167 docker stop usea-app-html || true
                     '''
-                    sh 'ssh root@54.204.234.40 docker run -d --name usea-app-html -p 9099:80 krolnoeurnrpisb/usea-app-html:${BUILD_NUMBER}'
+                    sh 'ssh root@34.227.61.167 docker run -d --name usea-app-html -p 9099:80 krolnoeurnrpisb/usea-app-html:${BUILD_NUMBER}'
                 // Add your deploy commands here
                 }
                 
